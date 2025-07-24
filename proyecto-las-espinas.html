@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las espinas - Florencia Pennella</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-text">&lt;/oncefloresazules&gt;</a>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item" data-text="01">
+                <span data-es="inicio" data-en="home">inicio</span>
+            </a>
+            <a href="proyectos.html" class="nav-item" data-text="02">
+                <span data-es="proyectos" data-en="projects">proyectos</span>
+            </a>
+            <a href="sobre-mi.html" class="nav-item" data-text="03">
+                <span data-es="sobre-mi" data-en="about">sobre-mi</span>
+            </a>
+            <a href="contacto.html" class="nav-item" data-text="04">
+                <span data-es="contacto" data-en="contact">contacto</span>
+            </a>
+            <div class="language-selector mobile-only">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <div class="language-selector desktop-only">
+            <button class="lang-btn active" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <main class="main-viewport">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="noise-overlay"></div>
+        </div>
+        
+        <!-- Header del proyecto -->
+        <div class="project-header-minimal">
+            <div class="project-nav">
+                <a href="proyectos.html" class="back-link">
+                    <span>←</span>
+                    <span data-es="Proyectos" data-en="Projects">Proyectos</span>
+                </a>
+            </div>
+            
+            <div class="project-hero">
+                <div class="project-meta-minimal">
+                    <span class="project-number">007</span>
+                    <span class="project-category-tag" data-es="Ficción" data-en="Fiction">Ficción</span>
+                    <span class="project-duration">11:26</span>
+                </div>
+                <h1 class="project-title-minimal">Las espinas</h1>
+                <p class="large-paragraph" data-es="Elena (40), vive para servir la voluntad de Beatriz (65), su madre; ante el encuentro con un hombre, deberá tomar la decisión de irse u olvidarse de sus deseos." 
+                   data-en="Elena (40), lives to serve the will of Beatriz (65), her mother; Before encountering a man, he must make the decision to leave or forget his desires.">
+                   Elena (40), vive para servir la voluntad de Beatriz (65), su madre; ante el encuentro con un hombre, deberá tomar la decisión de irse u olvidarse de sus deseos.
+                </p>
+            </div>
+        </div>
+
+        <!-- Contenido del proyecto -->
+        <div class="content-area">
+            <!-- Video embebido -->
+            <div class="project-video-section">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mD26avrIgl4?si=QwaqkqkV_tSyLzqm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Información del proyecto -->
+            <div class="project-details-layout">
+                <div class="project-main-content">
+                    <div class="project-section">
+                        <h3 class="section-title" data-es="Sinopsis" data-en="Synopsis">Sinopsis</h3>
+                        <p class="section-description" data-es="Elena (40), vive para servir la voluntad de Beatriz (65), su madre; ante el encuentro con un hombre, deberá tomar la decisión de irse u olvidarse de sus deseos. Un relato íntimo sobre la dependencia emocional, los vínculos familiares tóxicos y la búsqueda de la libertad personal en un contexto de opresión doméstica." 
+                           data-en="Elena (40), lives to serve the will of Beatriz (65), her mother; Before encountering a man, he must make the decision to leave or forget his desires. An intimate story about emotional dependency, toxic family bonds and the search for personal freedom in a context of domestic oppression.">
+                           Elena (40), vive para servir la voluntad de Beatriz (65), su madre; ante el encuentro con un hombre, deberá tomar la decisión de irse u olvidarse de sus deseos. Un relato íntimo sobre la dependencia emocional, los vínculos familiares tóxicos y la búsqueda de la libertad personal en un contexto de opresión doméstica.
+                        </p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3 class="section-title" data-es="Mi Rol" data-en="My Role">Mi Rol</h3>
+                        <p class="section-description" data-es="Como operadora de cámara, trabajé en estrecha colaboración con la directora de fotografía Marianela García para capturar la atmósfera claustrofóbica y emotiva del relato. El trabajo de cámara se enfocó en crear una intimidad visual que reflejara el estado emocional de Elena y la tensión constante en su relación con su madre." 
+                           data-en="As camera operator, I worked closely with cinematographer Marianela García to capture the claustrophobic and emotional atmosphere of the story. The camera work focused on creating visual intimacy that reflected Elena's emotional state and the constant tension in her relationship with her mother.">
+                           Como operadora de cámara, trabajé en estrecha colaboración con la directora de fotografía Marianela García para capturar la atmósfera claustrofóbica y emotiva del relato. El trabajo de cámara se enfocó en crear una intimidad visual que reflejara el estado emocional de Elena y la tensión constante en su relación con su madre.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="project-info-card">
+                        <h4 class="section-title" data-es="Detalles Técnicos" data-en="Technical Details">Detalles Técnicos</h4>
+                        <div class="project-specs">
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Año" data-en="Year">Año</span>
+                                <span class="spec-value">2019</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Duración" data-en="Duration">Duración</span>
+                                <span class="spec-value">11:26</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Género" data-en="Genre">Género</span>
+                                <span class="spec-value" data-es="Ficción" data-en="Fiction">Ficción</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Mi Rol" data-en="My Role">Mi Rol</span>
+                                <span class="spec-value" data-es="Cámara" data-en="Camera">Cámara</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info-card">
+                        <h4 class="section-title" data-es="Equipo Técnico" data-en="Technical Team">Equipo Técnico</h4>
+                        <div class="team-list">
+                            <div class="team-member">
+                                <span class="role" data-es="Dirección" data-en="Direction">Dirección</span>
+                                <span class="name">Paloma Morales</span>
+                            </div>
+                            <div class="team-member">
+                                <span class="role" data-es="Dirección de fotografía" data-en="Cinematography">Dirección de fotografía</span>
+                                <span class="name">Marianela García</span>
+                            </div>
+                            <div class="team-member">
+                                <span class="role" data-es="Cámara" data-en="Camera">Cámara</span>
+                                <span class="name">Florencia Pennella</span>
+                            </div>
+                            <div class="team-member">
+                                <span class="role" data-es="Dirección de sonido" data-en="Sound Direction">Dirección de sonido</span>
+                                <span class="name">Clara González Paladino</span>
+                            </div>
+                            <div class="team-member">
+                                <span class="role" data-es="Dirección de arte" data-en="Art Direction">Dirección de arte</span>
+                                <span class="name">Lara Justet</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://www.youtube.com/watch?v=44vng603AQk" target="_blank" class="external-project-link">
+                            <span data-es="Ver en YouTube" data-en="Watch on YouTube">Ver en YouTube</span>
+                            <span>↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <span>&copy; 2025 Florencia Pennella</span>
+            </div>
+            <div class="footer-tech">
+                <span>Buenos Aires, Argentina</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

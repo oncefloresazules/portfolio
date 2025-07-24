@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Florencia Pennella - Diseñadora de Imagen y Sonido</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cursor personalizado -->
+  <div class="cursor">
+      <div class="cursor-dot"></div>
+      <div class="cursor-outline"></div>
+  </div>
+
+  <!-- Loader -->
+  <div class="loader">
+      <div class="loader-content">
+          <div class="terminal">
+              <div class="terminal-header">
+                  <span class="terminal-title">florencia_portfolio.exe</span>
+              </div>
+              <div class="terminal-body">
+                  <div class="code-line">
+                      <span class="prompt">$</span>
+                      <span class="command" id="loading-text">Inicializando portfolio...</span>
+                      <span class="cursor-blink">|</span>
+                  </div>
+              </div>
+          </div>
+          <div class="loading-bar">
+              <div class="loading-progress"></div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Navegación -->
+  <nav class="navbar">
+      <div class="nav-brand">
+          <span class="brand-text">&lt;/oncefloresazules&gt;</span>
+      </div>
+      <div class="nav-menu">
+          <a href="index.html" class="nav-item active" data-text="01">
+              <span data-es="inicio" data-en="home">inicio</span>
+          </a>
+          <a href="proyectos.html" class="nav-item" data-text="02">
+              <span data-es="proyectos" data-en="projects">proyectos</span>
+          </a>
+          <a href="sobre-mi.html" class="nav-item" data-text="03">
+              <span data-es="sobre-mi" data-en="about">sobre-mi</span>
+          </a>
+          <a href="contacto.html" class="nav-item" data-text="04">
+              <span data-es="contacto" data-en="contact">contacto</span>
+          </a>
+          <!-- Selector de idioma solo para móvil (dentro del menú) -->
+          <div class="language-selector mobile-only">
+              <button class="lang-btn active" data-lang="es">ES</button>
+              <button class="lang-btn" data-lang="en">EN</button>
+          </div>
+      </div>
+      <!-- Selector de idioma para desktop (fuera del menú) -->
+      <div class="language-selector desktop-only">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <div class="nav-toggle">
+          <span></span>
+          <span></span>
+      </div>
+  </nav>
+
+  <!-- Contenedor principal -->
+  <main class="main-viewport">
+      <div class="hero-bg">
+          <div class="grid-overlay"></div>
+          <div class="noise-overlay"></div>
+      </div>
+      
+      <!-- Header consistente -->
+      <div class="page-header">
+          <div class="page-number">01</div>
+          <h1 class="page-title" data-es="inicio" data-en="home">inicio</h1>
+      </div>
+
+      <!-- Contenido principal -->
+      <div class="content-area">
+  <div class="hero-content">
+    <div class="hero-terminal">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-buttons">
+            <span class="btn-close"></span>
+            <span class="btn-minimize"></span>
+            <span class="btn-maximize"></span>
+          </div>
+          <span class="terminal-title" data-es="creative_designer.js" data-en="creative_designer.js">creative_designer.js</span>
+        </div>
+        <div class="terminal-content">
+          <div class="code-block">
+            <span class="line-number">01</span>
+            <span class="code">const <span class="variable" data-es="designer" data-en="designer">designer</span> = {</span>
+          </div>
+          <div class="code-block">
+            <span class="line-number">02</span>
+            <span class="code">  name: <span class="string" data-es='"Florencia Pennella"' data-en='"Florencia Pennella"'>"Florencia Pennella"</span>,</span>
+          </div>
+          <div class="code-block">
+            <span class="line-number">03</span>
+            <span class="code">  skills: [<span class="string" data-es='"creatividad"' data-en='"creativity"'>"creatividad"</span>, <span class="string" data-es='"responsabilidad"' data-en='"responsibility"'>"responsabilidad"</span>, <span class="string" data-es='"colaboración"' data-en='"collaboration"'>"colaboración"</span>],</span>
+          </div>
+          <div class="code-block">
+            <span class="line-number">04</span>
+            <span class="code">  passion: <span class="string" data-es='"innovación_sensorial"' data-en='"sensory_innovation"'>"innovación_sensorial"</span>,</span>
+          </div>
+          <div class="code-block">
+            <span class="line-number">05</span>
+            <span class="code">  location: <span class="string" data-es='"Buenos Aires"' data-en='"Buenos Aires"'>"Buenos Aires"</span>,</span>
+          </div>
+          <div class="code-block">
+            <span class="line-number">06</span>
+            <span class="code">  status: <span class="string" data-es='"disponible"' data-en='"available"'>"disponible"</span></span>
+          </div>
+          <div class="code-block">
+            <span class="line-number">07</span>
+            <span class="code">};</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+              
+             <div class="hero-text">
+    <h2 class="section-subtitle">
+        <span data-es="Diseñadora de Imagen y Sonido" data-en="Image and Sound Designer">Diseñadora de Imagen y Sonido</span>
+    </h2>
+    <p class="intro-paragraph" data-es="Exploro la intersección entre lo tangible y sensorial, y las posibilidades innovadoras e infinitas de la tecnología." 
+       data-en="I explore the intersection between the tangible and sensory, and the innovative and infinite possibilities of technology.">
+       Exploro la intersección entre lo tangible y sensorial, y las posibilidades innovadoras e infinitas de la tecnología.
+    </p>
+    <p class="intro-paragraph" data-es="Trabajo a partir de lenguajes como el videoarte, la fotografía analógica y el diseño interactivo, buscando crear experiencias audiovisuales que dialoguen entre la materialidad del pasado y el futuro digital." 
+       data-en="I work with languages such as video art, analog photography, and interactive design, aiming to create audiovisual experiences that dialogue between the materiality of the past and the digital future.">
+       Trabajo a partir de lenguajes como el videoarte, la fotografía analógica y el diseño interactivo, buscando crear experiencias audiovisuales que dialoguen entre la materialidad del pasado y el futuro digital.
+    </p>
+
+
+
+                  
+                  <div class="hero-actions">
+                      <a href="proyectos.html" class="action-button primary">
+                          <span data-es="Ver proyectos" data-en="View projects">Ver proyectos</span>
+                          <span class="button-arrow">→</span>
+                      </a>
+                      <a href="contacto.html" class="action-button secondary">
+                          <span data-es="Contacto" data-en="Contact">Contacto</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <div class="footer-content">
+          <div class="footer-text">
+              <span>&copy; 2025 Florencia Pennella</span>
+          </div>
+          <div class="footer-tech">
+              <span>Buenos Aires, Argentina</span>
+          </div>
+      </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

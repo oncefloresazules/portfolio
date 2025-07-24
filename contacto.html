@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Florencia Pennella</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-text">&lt;/oncefloresazules&gt;</a>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item" data-text="01">
+                <span data-es="inicio" data-en="home">inicio</span>
+            </a>
+            <a href="proyectos.html" class="nav-item" data-text="02">
+                <span data-es="proyectos" data-en="projects">proyectos</span>
+            </a>
+            <a href="sobre-mi.html" class="nav-item" data-text="03">
+                <span data-es="sobre-mi" data-en="about">sobre-mi</span>
+            </a>
+            <a href="contacto.html" class="nav-item active" data-text="04">
+                <span data-es="contacto" data-en="contact">contacto</span>
+            </a>
+            <!-- Selector de idioma solo para móvil (dentro del menú) -->
+            <div class="language-selector mobile-only">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <!-- Selector de idioma para desktop (fuera del menú) -->
+        <div class="language-selector desktop-only">
+            <button class="lang-btn active" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <main class="main-viewport">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="noise-overlay"></div>
+        </div>
+        
+        <!-- Header consistente -->
+        <div class="page-header">
+            <div class="page-number">04</div>
+            <h1 class="page-title" data-es="contacto" data-en="contact">contacto</h1>
+        </div>
+
+        <!-- Contenido -->
+       <div class="content-area">
+    <div class="contact-layout">
+        <div class="contact-main">
+            <div class="contact-intro">
+                <h2 class="section-subtitle" data-es="Conectar, imaginar, hacer." data-en="Connect, imagine, create.">Conectar, imaginar, hacer.</h2>
+                <p class="intro-paragraph">
+                    <span 
+                        data-es="Busco proyectos que exploren nuevas formas de generar sensaciones y transmitir conceptos. Si estás trabajando en algo que combine arte y tecnología, o si querés intercambiar ideas, escribime." 
+                        data-en="I'm looking for projects that explore new ways of evoking emotions and conveying ideas. If you're working on something that blends art and technology —or just want to exchange ideas— feel free to reach out.">
+                        Busco proyectos que exploren nuevas formas de generar sensaciones y transmitir conceptos. Si estás trabajando en algo que combine arte y tecnología, o si querés intercambiar ideas, escribime.
+                    </span>
+                </p>
+            </div>
+
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <h3 class="section-title" data-es="Email" data-en="Email">Email</h3>
+                            <a href="mailto:florpennella9@gmail.com" class="contact-link">florpennella9@gmail.com</a>
+                        </div>
+
+                        <div class="contact-method">
+                            <h3 class="section-title" data-es="Teléfono" data-en="Phone">Teléfono</h3>
+                            <a href="https://wa.me/5492346514109" class="contact-link" target="_blank">+54 9 2346 514109</a>
+                        </div>
+
+                        <div class="contact-method">
+                            <h3 class="section-title" data-es="Ubicación" data-en="Location">Ubicación</h3>
+                            <span class="contact-info">Buenos Aires, Argentina</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-visual">
+                    <div class="availability-status">
+                        <div class="status-indicator">
+                            <div class="status-dot"></div>
+                            <span data-es="Disponible para proyectos" data-en="Available for projects">Disponible para proyectos</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3 data-es="Seguime" data-en="Follow me">Seguime</h3>
+                        <div class="social-list">
+                            <a href="https://www.instagram.com/florpennella" class="social-link" target="_blank">
+                                <span>Instagram</span>
+                                <span class="social-handle">@florpennella</span>
+                            </a>
+                            <a href="https://www.behance.net/florencpennell" class="social-link" target="_blank">
+                                <span>Behance</span>
+                                <span class="social-handle">florencia-pennella</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/florencia-pennella/" class="social-link" target="_blank">
+                                <span>Linkedin</span>
+                                <span class="social-handle">florencia-pennella</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <span>&copy; 2025 Florencia Pennella</span>
+            </div>
+            <div class="footer-tech">
+                <span>Buenos Aires, Argentina</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

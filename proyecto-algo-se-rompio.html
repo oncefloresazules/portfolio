@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo se rompió -pero lo roto no ha desaparecido- - Florencia Pennella</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-text">&lt;/oncefloresazules&gt;</a>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item" data-text="01">
+                <span data-es="inicio" data-en="home">inicio</span>
+            </a>
+            <a href="proyectos.html" class="nav-item" data-text="02">
+                <span data-es="proyectos" data-en="projects">proyectos</span>
+            </a>
+            <a href="sobre-mi.html" class="nav-item" data-text="03">
+                <span data-es="sobre-mi" data-en="about">sobre-mi</span>
+            </a>
+            <a href="contacto.html" class="nav-item" data-text="04">
+                <span data-es="contacto" data-en="contact">contacto</span>
+            </a>
+            <div class="language-selector mobile-only">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <div class="language-selector desktop-only">
+            <button class="lang-btn active" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <main class="main-viewport">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="noise-overlay"></div>
+        </div>
+        
+        <!-- Header del proyecto -->
+        <div class="project-header-minimal">
+            <div class="project-nav">
+                <a href="proyectos.html" class="back-link">
+                    <span>←</span>
+                    <span data-es="Proyectos" data-en="Projects">Proyectos</span>
+                </a>
+            </div>
+            
+            <div class="project-hero">
+                <div class="project-meta-minimal">
+                    <span class="project-number">010</span>
+                    <span class="project-category-tag" data-es="Cine Experimental" data-en="Experimental Cinema">Cine Experimental</span>
+                    <span class="project-duration">1:29</span>
+                </div>
+                <h1 class="project-title-minimal">Algo se rompió<br><em>-pero lo roto no ha desaparecido-</em></h1>
+                <p class="large-paragraph" data-es="Una exploración audiovisual experimental que parte del hallazgo de fotografías familiares rotas encontradas en la calle. A través de procesos de abstracción digital, la pieza reflexiona sobre la memoria, el tiempo y la transformación de lo material hacia lo inmaterial." 
+                   data-en="An experimental audiovisual exploration that starts from the discovery of broken family photographs found on the street. Through digital abstraction processes, the piece reflects on memory, time and the transformation from material to immaterial.">
+                   Una exploración audiovisual experimental que parte del hallazgo de fotografías familiares rotas encontradas en la calle. A través de procesos de abstracción digital, la pieza reflexiona sobre la memoria, el tiempo y la transformación de lo material hacia lo inmaterial.
+                </p>
+            </div>
+        </div>
+
+        <!-- Contenido del proyecto -->
+        <div class="content-area">
+            <!-- Video embebido -->
+            <div class="project-video-section">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/P1ICsyly2p4" 
+                        title="Algo se rompió -pero lo roto no ha desaparecido-"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Información del proyecto -->
+            <div class="project-details-layout">
+                <div class="project-main-content">
+                    <div class="project-section">
+                        <h3 class="section-title" data-es="Origen del Proyecto" data-en="Project Origin">Origen del Proyecto</h3>
+                        <p class="section-description" data-es="Caminábamos con una amiga por la Av. Coronel Díaz luego de haber presenciado un show en vivo de Marilina Bertoldi en una plaza. Hacía mucho frío aquel domingo del 2019, cuando nos topamos con una gran cantidad de fotografías familiares y negativos desparramados por la vereda. La mayoría de las fotos compartían un rasgo particular: estaban rotas, atravesadas por las marcas del acto de quebrar." 
+                           data-en="We were walking with a friend along Av. Coronel Díaz after witnessing a live show by Marilina Bertoldi in a plaza. It was very cold that Sunday in 2019, when we came across a large number of family photographs and negatives scattered on the sidewalk. Most of the photos shared a particular trait: they were broken, crossed by the marks of the act of breaking.">
+                           Caminábamos con una amiga por la Av. Coronel Díaz luego de haber presenciado un show en vivo de Marilina Bertoldi en una plaza. Hacía mucho frío aquel domingo del 2019, cuando nos topamos con una gran cantidad de fotografías familiares y negativos desparramados por la vereda. La mayoría de las fotos compartían un rasgo particular: estaban rotas, atravesadas por las marcas del acto de quebrar.
+                        </p>
+                        <p class="section-description" data-es="Muchas personas se encontraban en el lugar, armando hipótesis sobre lo que pudo haber ocurrido previo a este hecho en la familia. Surgían dudas como quién era pareja de quién, y cuáles eran sus hijxs, sus nietxs, si hubo alguna ruptura amorosa, quizás algún amante, o tal vez una muerte. Miles de interpretaciones cargaban a las fotografías de otros significados sumados a los que ya tenían." 
+                           data-en="Many people were at the scene, forming hypotheses about what could have happened prior to this event in the family. Questions arose about who was whose partner, and who were their children, their grandchildren, whether there was a romantic breakup, perhaps a lover, or maybe a death. Thousands of interpretations loaded the photographs with other meanings in addition to those they already had.">
+                           Muchas personas se encontraban en el lugar, armando hipótesis sobre lo que pudo haber ocurrido previo a este hecho en la familia. Surgían dudas como quién era pareja de quién, y cuáles eran sus hijxs, sus nietxs, si hubo alguna ruptura amorosa, quizás algún amante, o tal vez una muerte. Miles de interpretaciones cargaban a las fotografías de otros significados sumados a los que ya tenían.
+                        </p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3 class="section-title" data-es="Proceso Creativo" data-en="Creative Process">Proceso Creativo</h3>
+                        <p class="section-description" data-es="El proyecto se desarrolló como una experimentación progresiva que partió de lo figurativo hacia lo abstracto. Comencé realizando recortes de la imagen principal - una fotografía familiar en la nieve - y multiplicándola para crear patrones. A medida que avanzaba el proceso, fui aplicando diferentes técnicas de deformación y abstracción utilizando herramientas como Photoshop, Illustrator, Premiere y TouchDesigner." 
+                           data-en="The project developed as a progressive experimentation that went from figurative to abstract. I started by making cuts of the main image - a family photograph in the snow - and multiplying it to create patterns. As the process progressed, I applied different deformation and abstraction techniques using tools like Photoshop, Illustrator, Premiere and TouchDesigner.">
+                           El proyecto se desarrolló como una experimentación progresiva que partió de lo figurativo hacia lo abstracto. Comencé realizando recortes de la imagen principal - una fotografía familiar en la nieve - y multiplicándola para crear patrones. A medida que avanzaba el proceso, fui aplicando diferentes técnicas de deformación y abstracción utilizando herramientas como Photoshop, Illustrator, Premiere y TouchDesigner.
+                        </p>
+                        <p class="section-description" data-es="La experimentación se centró en la 'figura-fondo', el recorte de la imagen, la silueta, las texturas, la abstracción, el loop, las curvas, y la relación entre materialidad y lo digital. Las formas abstractas que parten de las roturas de las tres imágenes encontradas dialogarían con lo figurativo de la foto en sí, creando un nuevo paisaje que aísla a la familia, la lleva a otros estados, la multiplica, la aleja o la hace infinita." 
+                           data-en="The experimentation focused on 'figure-ground', image cropping, silhouette, textures, abstraction, loops, curves, and the relationship between materiality and the digital. The abstract forms that emerge from the breaks in the three found images would dialogue with the figurative aspect of the photo itself, creating a new landscape that isolates the family, takes them to other states, multiplies them, distances them or makes them infinite.">
+                           La experimentación se centró en la "figura-fondo", el recorte de la imagen, la silueta, las texturas, la abstracción, el loop, las curvas, y la relación entre materialidad y lo digital. Las formas abstractas que parten de las roturas de las tres imágenes encontradas dialogarían con lo figurativo de la foto en sí, creando un nuevo paisaje que aísla a la familia, la lleva a otros estados, la multiplica, la aleja o la hace infinita.
+                        </p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3 class="section-title" data-es="Reflexión Conceptual" data-en="Conceptual Reflection">Reflexión Conceptual</h3>
+                        <p class="section-description" data-es="'Si algo se rompe no deja de existir, sólo se hace evidente una transformación. Por eso, lo roto no ha desaparecido, sólo está cambiando.' Esta reflexión guió todo el proceso creativo, explorando cómo la fotografía fue cambiando, atravesando diferentes estadíos y continuando su transformación a lo largo del tiempo." 
+                           data-en="'If something breaks it doesn't cease to exist, it just makes a transformation evident. That's why what's broken hasn't disappeared, it's just changing.' This reflection guided the entire creative process, exploring how photography was changing, going through different stages and continuing its transformation over time.">
+                           "Si algo se rompe no deja de existir, sólo se hace evidente una transformación. Por eso, lo roto no ha desaparecido, sólo está cambiando." Esta reflexión guió todo el proceso creativo, explorando cómo la fotografía fue cambiando, atravesando diferentes estadíos y continuando su transformación a lo largo del tiempo.
+                        </p>
+                        <p class="section-description" data-es="El proyecto cuestiona la relación entre lo material de la fotografía y su mutación hacia lo digital, haciendo evidente esta transformación al poder aislar a los personajes de la imagen y ponerlos en contacto con un mundo abstracto creado gracias a herramientas tecnológicas." 
+                           data-en="The project questions the relationship between the materiality of photography and its mutation towards the digital, making this transformation evident by being able to isolate the characters from the image and put them in contact with an abstract world created thanks to technological tools.">
+                           El proyecto cuestiona la relación entre lo material de la fotografía y su mutación hacia lo digital, haciendo evidente esta transformación al poder aislar a los personajes de la imagen y ponerlos en contacto con un mundo abstracto creado gracias a herramientas tecnológicas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="project-info-card">
+                        <h4 class="section-title" data-es="Detalles Técnicos" data-en="Technical Details">Detalles Técnicos</h4>
+                        <div class="project-specs">
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Año" data-en="Year">Año</span>
+                                <span class="spec-value">2021</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Duración" data-en="Duration">Duración</span>
+                                <span class="spec-value">1:29</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Género" data-en="Genre">Género</span>
+                                <span class="spec-value" data-es="Cine Experimental" data-en="Experimental Cinema">Cine Experimental</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Realización" data-en="Direction">Realización</span>
+                                <span class="spec-value">Florencia Pennella</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info-card">
+                        <h4 class="section-title" data-es="Materiales y Herramientas" data-en="Materials and Tools">Materiales y Herramientas</h4>
+                        <div class="team-list">
+                            <div class="team-member">
+                                <span class="role" data-es="Materiales" data-en="Materials">Materiales</span>
+                                <span class="name" data-es="Fotografías encontradas en la calle (2019)" data-en="Photographs found on the street (2019)">Fotografías encontradas en la calle (2019)</span>
+                            </div>
+                            <div class="team-member">
+                                <span class="role" data-es="Música" data-en="Music">Música</span>
+                                <span class="name">Xerrox Cosmos - Alva Noto (2020)</span>
+                            </div>
+                            <div class="team-member">
+                                <span class="role" data-es="Software" data-en="Software">Software</span>
+                                <span class="name">Photoshop, Illustrator, Premiere, TouchDesigner</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info-card">
+                        <h4 class="section-title" data-es="Procesos Utilizados" data-en="Processes Used">Procesos Utilizados</h4>
+                        <div class="process-list">
+                            <div class="process-item">
+                                <span class="process-name" data-es="Recorte y Parche (PS)" data-en="Cropping and Patch (PS)">Recorte y Parche (PS)</span>
+                            </div>
+                            <div class="process-item">
+                                <span class="process-name" data-es="Calco de Imagen (AI)" data-en="Image Trace (AI)">Calco de Imagen (AI)</span>
+                            </div>
+                            <div class="process-item">
+                                <span class="process-name" data-es="Disolución cruzada (PR)" data-en="Cross Dissolve (PR)">Disolución cruzada (PR)</span>
+                            </div>
+                            <div class="process-item">
+                                <span class="process-name">FeedbackEdge, LightTunnel (TD)</span>
+                            </div>
+                            <div class="process-item">
+                                <span class="process-name" data-es="Molinete, Deformación por ondas" data-en="Twirl, Wave Deformation">Molinete, Deformación por ondas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://www.youtube.com/watch?v=P1ICsyly2p4" target="_blank" class="external-project-link">
+                            <span data-es="Ver en YouTube" data-en="Watch on YouTube">Ver en YouTube</span>
+                            <span>↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <span>&copy; 2025 Florencia Pennella</span>
+            </div>
+            <div class="footer-tech">
+                <span>Buenos Aires, Argentina</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

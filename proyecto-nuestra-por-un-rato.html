@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra por un rato - Florencia Pennella</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;909&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-text">&lt;/oncefloresazules&gt;</a>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item" data-text="01">
+                <span data-es="inicio" data-en="home">inicio</span>
+            </a>
+            <a href="proyectos.html" class="nav-item" data-text="02">
+                <span data-es="proyectos" data-en="projects">proyectos</span>
+            </a>
+            <a href="sobre-mi.html" class="nav-item" data-text="03">
+                <span data-es="sobre-mi" data-en="about">sobre-mi</span>
+            </a>
+            <a href="contacto.html" class="nav-item" data-text="04">
+                <span data-es="contacto" data-en="contact">contacto</span>
+            </a>
+            <div class="language-selector mobile-only">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <div class="language-selector desktop-only">
+            <button class="lang-btn active" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <main class="main-viewport">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="noise-overlay"></div>
+        </div>
+        
+        <!-- Header del proyecto -->
+        <div class="project-header-minimal">
+            <div class="project-nav">
+                <a href="proyectos.html" class="back-link">
+                    <span>←</span>
+                    <span data-es="Proyectos" data-en="Projects">Proyectos</span>
+                </a>
+            </div>
+            
+            <div class="project-hero">
+                <div class="project-meta-minimal">
+                    <span class="project-number">009</span>
+                    <span class="project-category-tag" data-es="Ensayo Documental" data-en="Documentary Essay">Ensayo Documental</span>
+                    <span class="project-duration">5:17</span>
+                </div>
+                <h1 class="project-title-minimal">Nuestra por un rato</h1>
+                <p class="large-paragraph" data-es="'Nuestra por un rato' habita el lugar del abandono y cuestiona, a partir de sus huellas, un tiempo que está en trance. Un viaje en donde la apropiación y la resignificación, lleva a las protagonistas a preguntarse si son las intrusas o las dueñas de aquella casa encontrada en el medio del camino." 
+                   data-en="'Nuestra por un rato' explores the space of abandonment and, through its lingering traces, questions a time caught in transition. It is a journey in which appropriation and reimagining lead the protagonists to wonder whether they are intruders or rightful heirs to a house found along the way.">
+                   "Nuestra por un rato" habita el lugar del abandono y cuestiona, a partir de sus huellas, un tiempo que está en trance. Un viaje en donde la apropiación y la resignificación, lleva a las protagonistas a preguntarse si son las intrusas o las dueñas de aquella casa encontrada en el medio del camino.
+                </p>
+            </div>
+        </div>
+
+        <!-- Contenido del proyecto -->
+        <div class="content-area">
+            <!-- Video embebido -->
+            <div class="project-video-section">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/Te29CHW6tiI" 
+                        title="Nuestra por un rato - Ensayo Documental"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Información del proyecto -->
+            <div class="project-details-layout">
+                <div class="project-main-content">
+                    <div class="project-section">
+                        <h3 class="section-title" data-es="Concepto" data-en="Concept">Concepto</h3>
+                        <p class="section-description" data-es="'Nuestra por un rato' surge de la búsqueda del abandono como un tesoro a conseguir, explorando lugares que plantean un tiempo en trance, o un sin tiempo, mezcla de pasado/presente/futuro. El proyecto nace del interés por estos espacios abandonados que cuentan una historia que ya no existe, pero que continúan allí sus signos. De esta forma buscamos apropiarnos del espacio, habitarlo, resignificarlo." 
+                           data-en="'Nuestra por un rato' emerges from the search for abandonment as a treasure to be found, exploring places that pose a time in trance, or a timeless state, a mixture of past/present/future. The project is born from interest in these abandoned spaces that tell a story that no longer exists, but whose signs continue there. In this way we seek to appropriate the space, inhabit it, resignify it.">
+                           "Nuestra por un rato" surge de la búsqueda del abandono como un tesoro a conseguir, explorando lugares que plantean un tiempo en trance, o un sin tiempo, mezcla de pasado/presente/futuro. El proyecto nace del interés por estos espacios abandonados que cuentan una historia que ya no existe, pero que continúan allí sus signos. De esta forma buscamos apropiarnos del espacio, habitarlo, resignificarlo.
+                        </p>
+                        <p class="section-description" data-es="Con la llegada a la casa abandonada pudimos encontrar 'nuestro tesoro'. Allí nos adueñamos de lo abandonado, lo intervenimos, lo vivenciamos. Se generó una especie de ritual con música, flores, recorridos por cada recoveco de la casa deshabitada. Capturamos las imágenes principalmente con handycams, lo que ayuda a conformar la estética de acuerdo a la idea del abandono." 
+                           data-en="With the arrival at the abandoned house we were able to find 'our treasure'. There we took ownership of the abandoned, we intervened it, we experienced it. A kind of ritual was generated with music, flowers, tours through every corner of the uninhabited house. We captured the images mainly with handycams, which helps to form the aesthetic according to the idea of abandonment.">
+                           Con la llegada a la casa abandonada pudimos encontrar "nuestro tesoro". Allí nos adueñamos de lo abandonado, lo intervenimos, lo vivenciamos. Se generó una especie de ritual con música, flores, recorridos por cada recoveco de la casa deshabitada. Capturamos las imágenes principalmente con handycams, lo que ayuda a conformar la estética de acuerdo a la idea del abandono.
+                        </p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3 class="section-title" data-es="Proceso Creativo" data-en="Creative Process">Proceso Creativo</h3>
+                        <p class="section-description" data-es="Este proyecto surge de un trabajo colaborativo entre cuatro realizadoras, donde cada una aportó su mirada particular sobre el espacio y la memoria. Como co-realizadora, participé en todas las etapas del proceso: desde la conceptualización inicial, pasando por la captura de imágenes y sonidos, hasta la construcción narrativa en post-producción. El enfoque experimental nos permitió explorar nuevas formas de contar, utilizando el ensayo audiovisual como herramienta de reflexión." 
+                           data-en="This project emerges from a collaborative work between four filmmakers, where each contributed her particular view on space and memory. As co-director, I participated in all stages of the process: from initial conceptualization, through image and sound capture, to narrative construction in post-production. The experimental approach allowed us to explore new ways of storytelling, using the audiovisual essay as a tool for reflection.">
+                           Este proyecto surge de un trabajo colaborativo entre cuatro realizadoras, donde cada una aportó su mirada particular sobre el espacio y la memoria. Como co-realizadora, participé en todas las etapas del proceso: desde la conceptualización inicial, pasando por la captura de imágenes y sonidos, hasta la construcción narrativa en post-producción. El enfoque experimental nos permitió explorar nuevas formas de contar, utilizando el ensayo audiovisual como herramienta de reflexión.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="project-info-card">
+                        <h4 class="section-title" data-es="Detalles Técnicos" data-en="Technical Details">Detalles Técnicos</h4>
+                        <div class="project-specs">
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Año" data-en="Year">Año</span>
+                                <span class="spec-value">2022</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Duración" data-en="Duration">Duración</span>
+                                <span class="spec-value">5:17</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Género" data-en="Genre">Género</span>
+                                <span class="spec-value" data-es="Ensayo Documental" data-en="Documentary Essay">Ensayo Documental</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Mi Rol" data-en="My Role">Mi Rol</span>
+                                <span class="spec-value" data-es="Co-realizadora" data-en="Co-director">Co-realizadora</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info-card">
+                        <h4 class="section-title" data-es="Realización" data-en="Direction">Realización</h4>
+                        <div class="team-list">
+                            <div class="team-member">
+                                <span class="name">Juana Delucchi</span>
+                            </div>
+                            <div class="team-member">
+                                <span class="name">Candelaria Fonterosa</span>
+                            </div>
+                            <div class="team-member">
+                                <span class="name">Florencia Pennella</span>
+                            </div>
+                            <div class="team-member">
+                                <span class="name">Sol Piñeiro Ferguson</span>
+                            </div>
+                            <div class="team-member">
+                                <span class="name">Carla Lilen Tabbia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://www.youtube.com/watch?v=Te29CHW6tiI" target="_blank" class="external-project-link">
+                            <span data-es="Ver en YouTube" data-en="Watch on YouTube">Ver en YouTube</span>
+                            <span>↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <span>&copy; 2025 Florencia Pennella</span>
+            </div>
+            <div class="footer-tech">
+                <span>Buenos Aires, Argentina</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
