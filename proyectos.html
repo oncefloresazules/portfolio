@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Florencia Pennella</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-text">&lt;/oncefloresazules&gt;</a>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item" data-text="01">
+                <span data-es="inicio" data-en="home">inicio</span>
+            </a>
+            <a href="proyectos.html" class="nav-item active" data-text="02">
+                <span data-es="proyectos" data-en="projects">proyectos</span>
+            </a>
+            <a href="sobre-mi.html" class="nav-item" data-text="03">
+                <span data-es="sobre-mi" data-en="about">sobre-mi</span>
+            </a>
+            <a href="contacto.html" class="nav-item" data-text="04">
+                <span data-es="contacto" data-en="contact">contacto</span>
+            </a>
+            <div class="language-selector mobile-only">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <div class="language-selector desktop-only">
+            <button class="lang-btn active" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <main class="main-viewport">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="noise-overlay"></div>
+        </div>
+        
+        <!-- Header consistente -->
+        <div class="page-header">
+            <div class="page-number">02</div>
+            <h1 class="page-title" data-es="proyectos" data-en="projects">proyectos</h1>
+        </div>
+
+        <!-- Filtros
+        <div class="filters-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <span data-es="todos" data-en="all">todos</span>
+                    <span class="filter-count">7</span>
+                </button>
+                <button class="filter-btn" data-filter="interactive">
+                    <span data-es="interactivo" data-en="interactive">interactivo</span>
+                    <span class="filter-count">1</span>
+                </button>
+                <button class="filter-btn" data-filter="photo">
+                    <span data-es="foto" data-en="photo">foto</span>
+                    <span class="filter-count">1</span>
+                </button>
+                <button class="filter-btn" data-filter="video">
+                    <span data-es="video" data-en="video">video</span>
+                    <span class="filter-count">5</span>
+                </button>
+            </div>
+        </div> -->
+
+        <!-- Grid de proyectos -->
+        <div class="content-area">
+            <div class="projects-grid">
+   
+    <!-- Proyecto 001 - ¿Ningún cuerpo es tierra firme? -->
+    <a href="https://oncefloresazules.github.io/ningun-cuerpo-es-tierra-firme/" target="_blank" class="project-item project-link" data-category="interactive">
+        <div class="project-image">
+            <img src="images/ningun-cuerpo-es-tierra-firme.png" alt="¿Ningún cuerpo es tierra firme?">
+            <div class="project-overlay">
+                <div class="project-info">
+                    <h3>¿Ningún cuerpo es tierra firme?</h3>
+                    <p data-es="Arte interactivo • p5.js • Archivo" data-en="Interactive art • p5.js • Footage">Arte interactivo • p5.js • Archivo</p>
+                    <span class="project-year">2024</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-meta">
+            <span class="project-id">001</span>
+            <span class="project-status" data-es="COMPLETADO" data-en="COMPLETED">COMPLETADO</span>
+        </div>
+    </a>
+
+    <!--  Proyecto 002 - Fotografía Analógica
+    <a href="proyecto-fotografia.html" class="project-item project-link" data-category="photo">
+        <div class="project-image">
+            <img src="images/fotografia-analogica-thumb.jpg" alt="Fotografía Analógica">
+            <div class="project-overlay">
+                <div class="project-info">
+                    <h3 data-es="Fotografía Analógica" data-en="Analog Photography">Fotografía Analógica</h3>
+                    <p data-es="35mm" data-en="35mm">35mm</p>
+                    <span class="project-year">2023</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-meta">
+            <span class="project-id">002</span>
+            <span class="project-status" data-es="COMPLETADO" data-en="COMPLETED">COMPLETADO</span>
+        </div>
+    </a> -->
+
+   
+
+    <!-- Proyecto 005 - Nuestra por un rato -->
+    <a href="proyecto-nuestra-por-un-rato.html" class="project-item project-link" data-category="video">
+        <div class="project-image">
+            <img src="images/nuestra-por-un-rato-thumb.jpg" alt="Nuestra por un rato">
+            <div class="project-overlay">
+                <div class="project-info">
+                    <h3>Nuestra por un rato</h3>
+                    <p data-es="Ensayo documental • Co-dirección" data-en="Documentary essay • Co-direction">Ensayo documental • Co-dirección</p>
+                    <span class="project-year">2022</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-meta">
+            <span class="project-id">002</span>
+            <span class="project-status" data-es="COMPLETADO" data-en="COMPLETED">COMPLETADO</span>
+        </div>
+    </a>
+
+    <!-- Proyecto 006 - Algo se rompió -->
+    <a href="proyecto-algo-se-rompio.html" class="project-item project-link" data-category="video">
+        <div class="project-image">
+            <img src="images/algo-se-rompio-thumb.jpg" alt="Algo se rompió">
+            <div class="project-overlay">
+                <div class="project-info">
+                    <h3>Algo se rompió</h3>
+                    <p data-es="Cine experimental • Realización" data-en="Experimental cinema • Direction">Cine experimental • Realización</p>
+                    <span class="project-year">2021</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-meta">
+            <span class="project-id">003</span>
+            <span class="project-status" data-es="COMPLETADO" data-en="COMPLETED">COMPLETADO</span>
+        </div>
+    </a>
+
+    <!-- Proyecto 007 - Vuelta por el universo -->
+    <a href="proyecto-vuelta-por-el-universo.html" class="project-item project-link" data-category="video">
+        <div class="project-image">
+            <img src="images/vuelta-por-el-universo-thumb.png" alt="Vuelta por el universo">
+            <div class="project-overlay">
+                <div class="project-info">
+                    <h3>Vuelta por el universo</h3>
+                    <p data-es="Animación 3D • Co-realización" data-en="3D Animation • Co-direction">Animación 3D • Co-realización</p>
+                    <span class="project-year">2021</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-meta">
+            <span class="project-id">004</span>
+            <span class="project-status" data-es="COMPLETADO" data-en="COMPLETED">COMPLETADO</span>
+        </div>
+    </a>
+
+    <!-- Proyecto 004 - Lo que nos hizo ser -->
+    <a href="proyecto-lo-que-nos-hizo-ser.html" class="project-item project-link" data-category="video">
+        <div class="project-image">
+            <img src="images/lo-que-nos-hizo-ser-thumb.jpg" alt="Lo que nos hizo ser">
+            <div class="project-overlay">
+                <div class="project-info">
+                    <h3>Lo que nos hizo ser</h3>
+                    <p data-es="Cortometraje de ficción • Asist. Dirección / Montaje" data-en="Fiction short film • Asst. Direction / Editing">Cortometraje de ficción • Asist. Dirección / Montaje</p>
+                    <span class="project-year">2019</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-meta">
+            <span class="project-id">005</span>
+            <span class="project-status" data-es="COMPLETADO" data-en="COMPLETED">COMPLETADO</span>
+        </div>
+    </a>
+
+    <!-- Proyecto 003 - Las espinas -->
+    <a href="proyecto-las-espinas.html" class="project-item project-link" data-category="video">
+        <div class="project-image">
+            <img src="images/las-espinas-thumb.jpg" alt="Las espinas">
+            <div class="project-overlay">
+                <div class="project-info">
+                    <h3>Las espinas</h3>
+                    <p data-es="Cortometraje de ficción • Cámara" data-en="Fiction short film • Camera">Cortometraje de ficción • Cámara</p>
+                    <span class="project-year">2019</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-meta">
+            <span class="project-id">006</span>
+            <span class="project-status" data-es="COMPLETADO" data-en="COMPLETED">COMPLETADO</span>
+        </div>
+    </a>
+
+
+</div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <span>&copy; 2025 Florencia Pennella</span>
+            </div>
+            <div class="footer-tech">
+                <span>Buenos Aires, Argentina</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
