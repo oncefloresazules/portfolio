@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canto a los jueves - Florencia Pennella</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-y: scroll;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto 100px;
+      box-sizing: border-box;
+    }
+    .photo-thumb {
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+    }
+    .photo-thumb:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(177, 74, 191, 0.3);
+      z-index: 2;
+    }
+    .photo-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Agregando cursor personalizado -->
+  <div class="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+  </div>
+
+  <!-- Agregando navegación completa -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html" class="brand-text">&lt;/oncefloresazules&gt;</a>
+    </div>
+    <div class="nav-menu">
+      <a href="index.html" class="nav-item" data-text="01">
+        <span data-es="inicio" data-en="home">inicio</span>
+      </a>
+      <a href="proyectos.html" class="nav-item" data-text="02">
+        <span data-es="proyectos" data-en="projects">proyectos</span>
+      </a>
+      <a href="sobre-mi.html" class="nav-item" data-text="03">
+        <span data-es="sobre-mi" data-en="about">sobre-mi</span>
+      </a>
+      <a href="contacto.html" class="nav-item" data-text="04">
+        <span data-es="contacto" data-en="contact">contacto</span>
+      </a>
+      <div class="language-selector mobile-only">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+    <div class="language-selector desktop-only">
+      <button class="lang-btn active" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <div class="nav-toggle">
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <main class="main-viewport">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise-overlay"></div>
+    </div>
+    <div class="project-header-minimal">
+      <div class="project-nav">
+        <a href="proyectos.html" class="back-link">
+          <span>←</span>
+          <span data-es="Proyectos" data-en="Projects">Proyectos</span>
+        </a>
+      </div>
+      <div class="project-hero">
+        <div class="project-meta-minimal">
+          <span class="project-number">011</span>
+          <span class="project-category-tag" data-es="Fotografía" data-en="Photography">Fotografía</span>
+        </div>
+        <h1 class="project-title-minimal">Canto a los jueves</h1>
+        <p class="large-paragraph">
+          Un reportaje fotográfico documental que busca retratar la ronda de las Madres de Plaza de Mayo en Argentina. Estas valientes mujeres han marchado ininterrumpidamente desde aquellos años en que el horror, la violencia y la censura eran moneda corriente en el país. Sus cuerpos continúan resistiendo, circulando, cantando, abrazando, levantando banderas, alzando la voz. Esa es la forma de que sigan vivos todos los ideales de sus hijxs desaparecidxs.
+        </p>
+        
+        <!-- Actualizando botón de galería para seguir estilos del sitio -->
+        <div class="gallery-trigger" style="margin-top: 2rem;">
+          <button class="gallery-button" onclick="openGallery()">
+            <span data-es="Ver galería completa" data-en="View full gallery">Ver galería completa</span>
+            <span class="button-arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Eliminando grilla de fotos, solo manteniendo el modal -->
+  </main>
+  
+  <!-- Mejorando modal con navegación interna -->
+  <div class="image-modal" id="imageModal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <!-- Agregando navegación dentro del modal -->
+      <button class="modal-nav modal-prev" onclick="prevImage()">‹</button>
+      <button class="modal-nav modal-next" onclick="nextImage()">›</button>
+      <div class="modal-image-container">
+        <img src="/placeholder.svg" alt="" id="modalImage">
+      </div>
+      <div class="modal-info">
+        <div class="modal-meta">
+          <span id="modalNumber"></span>
+          <span id="modalFilm"></span>
+        </div>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agregando footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-text">
+        <span>&copy; 2025 Florencia Pennella</span>
+      </div>
+      <div class="footer-tech">
+        <span>Buenos Aires, Argentina</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="editorial-gallery.js"></script>
+  <!-- Agregando script principal para cursor y navegación -->
+  <script src="script.js"></script>
+  
+  <!-- Script para abrir galería directamente -->
+  <script>
+    function openGallery() {
+      document.getElementById('imageModal').style.display = 'flex';
+      // Cargar primera imagen
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = 'images/canto-a-los-jueves/1.jpg';
+      document.getElementById('modalNumber').textContent = '01/17';
+      document.getElementById('modalTitle').textContent = 'Canto a los jueves';
+      document.getElementById('modalDescription').textContent = 'Madres de Plaza de Mayo';
+    }
+
+    function prevImage() {
+      // Implementación para la imagen anterior
+    }
+
+    function nextImage() {
+      // Implementación para la imagen siguiente
+    }
+  </script>
+</body>
+</html>

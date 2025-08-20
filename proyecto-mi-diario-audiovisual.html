@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi diario audiovisual - Florencia Pennella</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-text">&lt;/oncefloresazules&gt;</a>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item" data-text="01">
+                <span data-es="inicio" data-en="home">inicio</span>
+            </a>
+            <a href="proyectos.html" class="nav-item" data-text="02">
+                <span data-es="proyectos" data-en="projects">proyectos</span>
+            </a>
+            <a href="sobre-mi.html" class="nav-item" data-text="03">
+                <span data-es="sobre-mi" data-en="about">sobre-mi</span>
+            </a>
+            <a href="contacto.html" class="nav-item" data-text="04">
+                <span data-es="contacto" data-en="contact">contacto</span>
+            </a>
+            <div class="language-selector mobile-only">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <div class="language-selector desktop-only">
+            <button class="lang-btn active" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <main class="main-viewport">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="noise-overlay"></div>
+        </div>
+        
+        <!-- Header del proyecto -->
+        <div class="project-header-minimal">
+            <div class="project-nav">
+                <a href="proyectos.html" class="back-link">
+                    <span>←</span>
+                    <span data-es="Proyectos" data-en="Projects">Proyectos</span>
+                </a>
+            </div>
+            
+            <div class="project-hero">
+                <div class="project-meta-minimal">
+                    <span class="project-number">005</span>
+                    <span class="project-category-tag" data-es="UX/UI" data-en="UX/UI">UX/UI</span>
+                    <span class="project-duration">UX/UI Design</span>
+                </div>
+                <h1 class="project-title-minimal">Mi diario audiovisual</h1>
+                <p class="large-paragraph" data-es="Diseño de plataforma web para la creación de un diario audiovisual, donde los usuarios puedan registrar sus vivencias a través de videos cortos y compartirlos de forma segura." 
+                   data-en="Web platform design for the creation of an audiovisual diary, where users can record their experiences through short videos and share them safely.">
+                   Diseño de plataforma web para la creación de un diario audiovisual, donde los usuarios puedan registrar sus vivencias a través de videos cortos y compartirlos de forma segura.
+                </p>
+            </div>
+        </div>
+
+        <!-- Contenido del proyecto -->
+        <div class="content-area">
+            <!-- Video embebido -->
+            <div class="project-video-section">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/q4GKdo6Xjz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Información del proyecto -->
+            <div class="project-details-layout">
+                <div class="project-main-content">
+                    <div class="project-section">
+                        <h3 class="section-title" data-es="Sinopsis" data-en="Synopsis">Sinopsis</h3>
+                        <p class="section-description" data-es="Este proyecto consistió en el diseño de una plataforma web intuitiva y fácil de usar, que permitiera a los usuarios crear y compartir sus propios diarios audiovisuales. Se realizó una investigación exhaustiva de las necesidades de los usuarios, se definieron las funcionalidades clave y se diseñó la interfaz de usuario, teniendo en cuenta la accesibilidad y la usabilidad." 
+                           data-en="This project consisted of the design of an intuitive and easy-to-use web platform, which allowed users to create and share their own audiovisual diaries. An exhaustive investigation of the users' needs was carried out, the key functionalities were defined and the user interface was designed, taking into account accessibility and usability.">
+                           Este proyecto consistió en el diseño de una plataforma web intuitiva y fácil de usar, que permitiera a los usuarios crear y compartir sus propios diarios audiovisuales. Se realizó una investigación exhaustiva de las necesidades de los usuarios, se definieron las funcionalidades clave y se diseñó la interfaz de usuario, teniendo en cuenta la accesibilidad y la usabilidad.
+                        </p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3 class="section-title" data-es="Proceso de Diseño" data-en="Design Process">Proceso de Diseño</h3>
+                        <p class="section-description" data-es="El proceso de diseño se centró en la creación de una experiencia de usuario fluida y atractiva. Se realizaron wireframes y prototipos interactivos para validar las ideas y se realizaron pruebas de usabilidad con usuarios reales para identificar áreas de mejora. Se trabajó en la identidad visual de la plataforma, creando un diseño moderno y minimalista que reflejara la esencia del proyecto." 
+                           data-en="The design process focused on creating a fluid and attractive user experience. Wireframes and interactive prototypes were created to validate the ideas and usability tests were carried out with real users to identify areas for improvement. We worked on the visual identity of the platform, creating a modern and minimalist design that reflected the essence of the project.">
+                           El proceso de diseño se centró en la creación de una experiencia de usuario fluida y atractiva. Se realizaron wireframes y prototipos interactivos para validar las ideas y se realizaron pruebas de usabilidad con usuarios reales para identificar áreas de mejora. Se trabajó en la identidad visual de la plataforma, creando un diseño moderno y minimalista que reflejara la esencia del proyecto.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="project-info-card">
+                        <h4 class="section-title" data-es="Detalles Técnicos" data-en="Technical Details">Detalles Técnicos</h4>
+                        <div class="project-specs">
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Año" data-en="Year">Año</span>
+                                <span class="spec-value">2023</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Tipo" data-en="Type">Tipo</span>
+                                <span class="spec-value" data-es="UX/UI Design" data-en="UX/UI Design">UX/UI Design</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Herramientas" data-en="Tools">Herramientas</span>
+                                <span class="spec-value" data-es="Figma, Adobe XD" data-en="Figma, Adobe XD">Figma, Adobe XD</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label" data-es="Mi Rol" data-en="My Role">Mi Rol</span>
+                                <span class="spec-value" data-es="Diseño UX/UI" data-en="UX/UI Design">Diseño UX/UI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info-card">
+                        <h4 class="section-title" data-es="Herramientas" data-en="Tools">Herramientas</h4>
+                        <div class="team-list">
+                            <div class="team-member">
+                                <span class="role" data-es="Software" data-en="Software">Software</span>
+                                <span class="name">Figma</span>
+                            </div>
+                            <div class="team-member">
+                                <span class="role" data-es="Prototipado" data-en="Prototyping">Prototipado</span>
+                                <span class="name">Adobe XD</span>
+                            </div>
+                            <div class="team-member">
+                                <span class="role" data-es="Ilustración" data-en="Illustration">Ilustración</span>
+                                <span class="name">Adobe Illustrator</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://www.behance.net/gallery/184024987/Mi-Diario-Audiovisual-UXUI-Case-Study" target="_blank" class="external-project-link">
+                            <span data-es="Ver en Behance" data-en="See on Behance">Ver en Behance</span>
+                            <span>↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <span>&copy; 2025 Florencia Pennella</span>
+            </div>
+            <div class="footer-tech">
+                <span>Buenos Aires, Argentina</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -23,10 +23,19 @@ document.addEventListener("DOMContentLoaded", () => {
   initInteractions()
 })
 
-// Loader
+// Loader mejorado - solo primera vez
 function initLoader() {
   const loadingText = document.getElementById("loading-text")
   if (!loadingText) return
+
+  // Verificar si ya se mostró el loader en esta sesión
+  const hasSeenLoader = sessionStorage.getItem("portfolio-loader-shown")
+
+  if (hasSeenLoader) {
+    // Si ya se mostró, ocultar inmediatamente
+    loader.classList.add("hidden")
+    return
+  }
 
   const loadingMessages = [
     "Inicializando portfolio...",
@@ -45,6 +54,8 @@ function initLoader() {
       clearInterval(messageInterval)
       setTimeout(() => {
         loader.classList.add("hidden")
+        // Marcar que el loader ya se mostró en esta sesión
+        sessionStorage.setItem("portfolio-loader-shown", "true")
       }, 500)
     }
   }, 600)

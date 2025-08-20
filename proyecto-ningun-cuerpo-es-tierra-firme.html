@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Ningún cuerpo es tierra firme? - Florencia Pennella</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-y: scroll;
+    }
+    /* Added responsive iframe container styles */
+    .project-iframe-container {
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto 100px;
+      box-sizing: border-box;
+    }
+    .project-iframe {
+      width: 100%;
+      height: 80vh;
+      min-height: 600px;
+      border: none;
+      border-radius: 8px;
+      background: #000;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    .external-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #b14abf;
+      text-decoration: none;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid #b14abf;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+    .external-link:hover {
+      background: #b14abf;
+      color: #000;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 768px) {
+      .project-iframe {
+        height: 70vh;
+        min-height: 500px;
+      }
+      .project-iframe-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Adding cursor personalizado -->
+  <div class="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+  </div>
+
+  <!-- Adding complete navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html" class="brand-text">&lt;/oncefloresazules&gt;</a>
+    </div>
+    <div class="nav-menu">
+      <a href="index.html" class="nav-item" data-text="01">
+        <span data-es="inicio" data-en="home">inicio</span>
+      </a>
+      <a href="proyectos.html" class="nav-item" data-text="02">
+        <span data-es="proyectos" data-en="projects">proyectos</span>
+      </a>
+      <a href="sobre-mi.html" class="nav-item" data-text="03">
+        <span data-es="sobre-mi" data-en="about">sobre-mi</span>
+      </a>
+      <a href="contacto.html" class="nav-item" data-text="04">
+        <span data-es="contacto" data-en="contact">contacto</span>
+      </a>
+      <div class="language-selector mobile-only">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+    <div class="language-selector desktop-only">
+      <button class="lang-btn active" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <div class="nav-toggle">
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <main class="main-viewport">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise-overlay"></div>
+    </div>
+    <!-- Updated to use project-header-minimal structure like other projects -->
+    <div class="project-header-minimal">
+      <div class="project-nav">
+        <a href="proyectos.html" class="back-link">
+          <span>←</span>
+          <span data-es="Proyectos" data-en="Projects">Proyectos</span>
+        </a>
+      </div>
+      <div class="project-hero">
+        <div class="project-meta-minimal">
+          <span class="project-number">002</span>
+          <span class="project-category-tag" data-es="Arte interactivo" data-en="Interactive art">Arte interactivo</span>
+        </div>
+        <h1 class="project-title-minimal">¿Ningún cuerpo es tierra firme?</h1>
+        <p class="large-paragraph">
+          Una pieza de arte interactivo que explora la fragilidad y transitoriedad del cuerpo humano. Utilizando p5.js y material de archivo, la obra invita a reflexionar sobre la permanencia y el cambio a través de la interacción digital.
+        </p>
+        <a href="https://oncefloresazules.github.io/ningun-cuerpo-es-tierra-firme/" target="_blank" class="external-link">
+          <span data-es="Ver en pantalla completa" data-en="View fullscreen">Ver en pantalla completa</span>
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+    <!-- Improved iframe container for better responsiveness -->
+    <div class="project-iframe-container">
+      <iframe src="https://oncefloresazules.github.io/ningun-cuerpo-es-tierra-firme/" class="project-iframe" title="¿Ningún cuerpo es tierra firme?"></iframe>
+    </div>
+  </main>
+
+  <!-- Adding footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-text">
+        <span>&copy; 2025 Florencia Pennella</span>
+      </div>
+      <div class="footer-tech">
+        <span>Buenos Aires, Argentina</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Adding main script for cursor and navigation -->
+  <script src="script.js"></script>
+</body>
+</html>
