@@ -125,6 +125,21 @@ function switchLanguage(lang) {
       content.style.display = "none"
     }
   })
+
+  const githubIframes = document.querySelectorAll('iframe[src*="github.io"]')
+  githubIframes.forEach((iframe) => {
+    try {
+      iframe.contentWindow.postMessage(
+        {
+          type: "LANGUAGE_CHANGE",
+          language: lang,
+        },
+        "*",
+      )
+    } catch (error) {
+      console.log("[v0] No se pudo enviar mensaje a iframe:", error)
+    }
+  })
 }
 
 // Cursor personalizado
