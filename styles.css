@@ -586,7 +586,6 @@ body {
   padding: 6px 12px;
   border-radius: 20px;
   letter-spacing: 1px;
-  text-transform: uppercase;
   font-weight: 600;
 }
 
@@ -695,7 +694,6 @@ body {
   font-family: var(--font-mono);
   font-size: 12px;
   color: var(--text-muted);
-  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
@@ -723,7 +721,6 @@ body {
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--text-muted);
-  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
@@ -1604,6 +1601,20 @@ body {
   .project-info-card {
     padding: 16px;
   }
+
+  /* Ajustando dimensiones del modal para fotos horizontales en mobile */
+  .modal-image-container img {
+    width: 95vw;
+    height: 53.4vw; /* 16:9 aspect ratio (95vw * 9/16) */
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  .modal-content {
+    max-width: 95vw;
+    max-height: 85vh;
+    padding: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1643,101 +1654,32 @@ body {
   .project-title-minimal {
     font-size: 1.5rem;
   }
-}
 
-/* Agregar estilos para las nuevas secciones de procesos y características técnicas: */
-.process-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.process-item {
-  padding: 6px 0;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.process-name {
-  font-size: 13px;
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-.feature-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.feature-item {
-  padding: 6px 0;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.feature-name {
-  font-size: 13px;
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-/* Responsive para páginas de proyectos individuales */
-@media (max-width: 768px) {
-  .project-header-minimal {
-    padding: 20px 20px 30px;
+  /* Optimizando para pantallas muy pequeñas con fotos horizontales */
+  .modal-image-container img {
+    width: 98vw;
+    height: 55.1vw; /* 16:9 aspect ratio (98vw * 9/16) */
+    max-height: 350px;
+    object-fit: cover;
   }
 
-  .project-hero {
-    text-align: left;
-  }
-
-  .project-meta-minimal {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .project-title-minimal {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-  }
-
-  .video-container {
-    max-width: 100%;
-    padding-bottom: 56.25%; /* Volver a 16:9 en móvil */
-    border-radius: 12px;
-  }
-
-  .project-details-layout {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .project-sidebar {
-    position: static;
-    gap: 20px;
-  }
-
-  .project-info-card {
-    padding: 16px;
+  .modal-content {
+    max-width: 98vw;
+    padding: 10px;
   }
 }
 
-@media (max-width: 480px) {
-  .project-header-minimal {
-    padding: 15px 15px 20px;
+/* Agregando media query específica para orientación landscape en mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .modal-image-container img {
+    width: 90vw;
+    height: 50.6vw; /* 16:9 aspect ratio (90vw * 9/16) */
+    max-height: none;
+    object-fit: cover;
   }
 
-  .project-title-minimal {
-    font-size: 1.5rem;
-  }
-
-  .video-container {
-    border-radius: 8px;
-    border-width: 1px;
-  }
-
-  .project-details-layout {
-    gap: 20px;
+  .modal-content {
+    max-height: 95vh;
   }
 }
 
@@ -1789,9 +1731,11 @@ body {
 }
 
 .modal-image-container img {
-  max-width: 100%;
-  max-height: 70vh;
-  object-fit: contain;
+  width: 80vw;
+  height: 70vh;
+  max-width: 800px;
+  max-height: 600px;
+  object-fit: cover;
   border-radius: 8px;
   transition: opacity 0.3s ease;
 }
@@ -1812,6 +1756,89 @@ body {
   display: flex;
   gap: 30px;
   margin-top: 20px;
+}
+
+/* Rediseñando controles de navegación del modal */
+.modal-close-redesigned {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+  z-index: 1003;
+  color: var(--text-primary);
+  font-size: 18px;
+}
+
+.modal-close-redesigned:hover {
+  background: var(--accent-color);
+  color: var(--primary-bg);
+  box-shadow: var(--glow);
+}
+
+.modal-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 15px 20px;
+  background: transparent;
+  border: none;
+  border-radius: 25px;
+  backdrop-filter: none;
+}
+
+.modal-nav-redesigned {
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--accent-color);
+  font-size: 16px;
+}
+
+.modal-nav-redesigned:hover {
+  background: var(--accent-color);
+  color: var(--primary-bg);
+  box-shadow: var(--glow);
+}
+
+.modal-info-redesigned {
+  text-align: center;
+  flex: 1;
+  margin: 0 20px;
+}
+
+.modal-info-redesigned span {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-info-redesigned h3 {
+  font-size: 16px;
+  color: var(--text-primary);
+  margin: 0;
+  font-weight: 500;
 }
 
 .modal-prev,
@@ -1835,13 +1862,29 @@ body {
 
 .modal-close {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 28px;
-  color: var(--accent-tertiary);
-  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: var(--transition);
+  z-index: 1001;
+  backdrop-filter: blur(10px);
+}
+
+.modal-close:hover {
+  background: var(--accent-color);
+  color: var(--primary-bg);
+  box-shadow: var(--glow);
 }
 
 .gallery-button {
@@ -1907,33 +1950,4 @@ body {
 
 .modal-next {
   right: 20px;
-}
-
-@media (max-width: 768px) {
-  /* Scrollbars personalizadas para mobile */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent-color) rgba(10, 25, 41, 0.3);
-  }
-
-  *::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  *::-webkit-scrollbar-track {
-    background: rgba(10, 25, 41, 0.3);
-    border-radius: 4px;
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  *::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-color));
-    box-shadow: 0 0 10px rgba(64, 224, 208, 0.3);
-  }
 }

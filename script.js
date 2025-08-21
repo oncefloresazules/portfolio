@@ -131,7 +131,7 @@ function switchLanguage(lang) {
     try {
       iframe.contentWindow.postMessage(
         {
-          type: "LANGUAGE_CHANGE",
+          type: "languageChange",
           language: lang,
         },
         "*",

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfecta simetría</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Variables del portfolio */
+        :root {
+            --primary-bg: #022741;
+            --secondary-bg: #0a1929;
+            --accent-color: #b14abf;
+            --accent-secondary: #41bf9a;
+            --accent-tertiary: #f2e63c;
+            --text-primary: #abb2bf;
+            --text-secondary: #8892a6;
+            --text-muted: #5c6370;
+            --border-color: #1e2a3a;
+            --font-mono: "JetBrains Mono", monospace;
+            --font-sans: "Inter", sans-serif;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            height: 100vh;
+            overflow: hidden; /* Sin scroll de página */
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: calc(100vh - 40px);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Estilos para el título del proyecto */
+        .project-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .project-title h1 {
+            color: var(--accent-color);
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-family: var(--font-mono);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .project-info {
+            text-align: center;
+            color: var(--text-secondary);
+            font-family: var(--font-sans);
+        }
+        
+        .project-info p {
+            margin: 3px 0;
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+            font-weight: 500;
+        }
+        
+        .project-info strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        h1 {
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 8px;
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            font-family: var(--font-mono);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .info {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+            font-family: var(--font-sans);
+        }
+        
+        .info p {
+            margin: 3px 0;
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+            font-weight: 500;
+        }
+        
+        .info strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        /* Layout de dos columnas 50/50 */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            flex: 1;
+            min-height: 0; /* Importante para el grid */
+        }
+        
+        .artwork-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #div-sketch {
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px;
+            background: var(--secondary-bg);
+            box-shadow: 0 20px 40px rgba(0, 39, 65, 0.3);
+            margin-bottom: 15px;
+        }
+        
+        .instructions {
+            text-align: center;
+            font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+            color: var(--text-muted);
+            font-style: italic;
+            max-width: 350px;
+            font-family: var(--font-mono);
+            line-height: 1.4;
+        }
+        
+        /* Columna de texto */
+        .text-section {
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+        
+        .text-container {
+            background: rgba(10, 25, 41, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+            min-height: 0;
+        }
+        
+        .text-content {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 10px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+            font-family: var(--font-sans);
+        }
+        
+        .text-content h3 {
+            color: var(--accent-secondary);
+            margin: 0 0 15px 0;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-family: var(--font-mono);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .text-content p {
+            margin-bottom: 14px;
+            font-weight: 400;
+            text-align: justify;
+        }
+        
+        .text-content p:first-of-type {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .text-content em {
+            color: var(--accent-tertiary);
+            font-style: italic;
+        }
+        
+        .text-content blockquote {
+            margin: 15px 0;
+            padding: 10px 15px;
+            border-left: 3px solid var(--accent-color);
+            background: rgba(177, 74, 191, 0.1);
+            font-style: italic;
+            color: var(--text-primary);
+        }
+        
+        /* Sección de bibliografía */
+        .bibliography {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .bibliography h4 {
+            color: var(--accent-secondary);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .bibliography p {
+            font-size: 0.8rem;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        
+        /* Selector de idioma */
+        .language-selector {
+            display: flex;
+            gap: 5px;
+            background: rgba(2, 39, 65, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 5px;
+            border: 1px solid var(--border-color);
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 8px 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-mono);
+        }
+
+        .lang-btn.active,
+        .lang-btn:hover {
+            background: var(--accent-color);
+            color: var(--primary-bg);
+        }
+        
+        /* Agregando estilos para elementos que se ocultan en iframe */
+        .iframe-hidden {
+            display: block;
+        }
+        
+        .iframe-hidden.in-iframe {
+            display: none !important;
+        }
+        
+        /* Scrollbar personalizada */
+        .text-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .text-content::-webkit-scrollbar-track {
+            background: var(--secondary-bg);
+            border-radius: 3px;
+        }
+        
+        .text-content::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 3px;
+        }
+        
+        .text-content::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-secondary);
+        }
+
+        .artwork-section {
+            height: 100%;           /* ocupa toda la columna */
+            display: flex;
+            align-items: center;    /* centra vertical */
+            justify-content: center;
+        }
+
+        #div-sketch canvas {
+            max-width: 100%;        /* nunca se pasa del ancho de la columna */
+            max-height: 100%;       /* nunca se pasa del alto disponible */
+            height: auto !important;
+            width: auto !important;
+            object-fit: contain;    /* mantiene proporciones */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                overflow-y: auto; /* Permitir scroll en móvil */
+            }
+            
+            .container {
+                height: auto;
+                min-height: 100vh;
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .text-content {
+                max-height: 400px;
+            }
+        }
+
+        /* Moviendo language-switcher a posición consistente */
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Agregando botón de idioma que se oculta en iframe -->
+    <div class="language-switcher iframe-hidden">
+        <div class="language-selector">
+            <button class="lang-btn active" onclick="switchLanguage('es')" id="lang-es">ES</button>
+            <button class="lang-btn" onclick="switchLanguage('en')" id="lang-en">EN</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Agregando título del proyecto que se oculta en iframe -->
+        <div class="project-title iframe-hidden">
+            <h1 data-es="Perfecta simetría" data-en="Perfect Symmetry">Perfecta simetría</h1>
+            <div class="project-info">
+                <p><strong>Florencia Pennella</strong> • 2024</p>
+                <p data-es="Arte interactivo • p5.js • Arte generativo" data-en="Interactive art • p5.js • Generative art">Arte interactivo • p5.js • Arte generativo</p>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <!-- Columna izquierda: Obra -->
+            <div class="artwork-section">
+                <div id="div-sketch"></div>
+            </div>
+            
+            <!-- Columna derecha: Texto -->
+            <div class="text-section">
+                <div class="text-container">
+                    <div class="text-content" id="text-content">
+                        <!-- Agregando contenido bilingüe con data-es y data-en -->
+                        <p style="font-weight: 600; color: var(--text-primary);" data-es='"Perfecta simetría" sitúa al espectador en un movimiento sinuoso de diversos cuadrados superpuestos. La obra consta de una grilla de tres capas de cuadrados con diferentes características: La primera capa está conformada por cuadrados negros, la segunda por el borde blanco de cuadrados más pequeños, y la tercera por cuadrados negros con alfa de menor tamaño que el segundo nivel. El movimiento ondulado en forma de loop de las figuras y el juego con el fondo mediante los espacios generados entre ellas nos plantea una pregunta: ¿qué es el error?' data-en='&quot;Perfect Symmetry&quot; places the viewer in a sinuous movement of various overlapping squares. The work consists of a grid of three layers of squares with different characteristics: The first layer is made up of black squares, the second by the white border of smaller squares, and the third by black squares with alpha smaller than the second level. The undulating loop-like movement of the figures and the play with the background through the spaces generated between them poses a question: what is error?'>"Perfecta simetría" sitúa al espectador en un movimiento sinuoso de diversos cuadrados superpuestos. La obra consta de una grilla de tres capas de cuadrados con diferentes características: La primera capa está conformada por cuadrados negros, la segunda por el borde blanco de cuadrados más pequeños, y la tercera por cuadrados negros con alfa de menor tamaño que el segundo nivel. El movimiento ondulado en forma de loop de las figuras y el juego con el fondo mediante los espacios generados entre ellas nos plantea una pregunta: ¿qué es el error?</p>
+                        
+                        <!-- Agregando contenido bilingüe con data-es y data-en -->
+                        <h3 data-es="Desarrollo técnico, estético y conceptual" data-en="Technical, aesthetic and conceptual development">Desarrollo técnico, estético y conceptual</h3>
+                        
+                        <p data-es='"Perfecta simetría" sitúa al espectador en un movimiento sinuoso de diversos cuadrados superpuestos. Un intento de ambigüedad puede transformar un patrón en algo sin límites. Surge una pregunta: ¿qué es el error? Una poeta argentina llamada Maia Tarcic escribe:' data-en='&quot;Perfect Symmetry&quot; places the viewer in a sinuous movement of various overlapping squares. An attempt at ambiguity can transform a pattern into something limitless. A question arises: what is error? An Argentine poet named Maia Tarcic writes:'>"Perfecta simetría" sitúa al espectador en un movimiento sinuoso de diversos cuadrados superpuestos. Un intento de ambigüedad puede transformar un patrón en algo sin límites. Surge una pregunta: ¿qué es el error? Una poeta argentina llamada Maia Tarcic escribe:</p>
+                        
+                        <blockquote data-es='"Me gustan las cosas que parecen un error. <br>Los recuerdos son defectuosos, <br>fractales,<br>caprichosos."<br>' data-en='&quot;I like things that seem like a mistake. <br>Memories are flawed, <br>fractals,<br>capricious.&quot;<br>'>
+                           "Me gustan las cosas que parecen un error. <br>
+                           Los recuerdos son defectuosos, <br>
+                           fractales,<br>
+                           caprichosos."<br>
+                        </blockquote>
+                        
+                        <p data-es='José Luis Brea, en *Redefinición de las prácticas artísticas*, aproxima la creación artística a lo onírico de los sueños:' data-en='José Luis Brea, in *Redefinition of artistic practices*, brings artistic creation closer to the dreamlike nature of dreams:'>José Luis Brea, en *Redefinición de las prácticas artísticas*, aproxima la creación artística a lo onírico de los sueños:</p>
+
+                        <blockquote data-es='"Por más de una razón, deberíamos asemejar el trabajo del arte al del sueño: es una producción que induce formaciones de superficie que expresan, que traducen aproximadamente, un estado descompensado de energías. Lo esencial en ellas no es la forma o apariencia que adquieren en un instante dado, sino el campo de intensidades –o sea, el diferencial de potenciales– en el que se efectúan."' data-en='&quot;For more than one reason, we should liken the work of art to that of dreams: it is a production that induces surface formations that express, that approximately translate, an uncompensated state of energies. What is essential in them is not the form or appearance they acquire at a given moment, but the field of intensities –that is, the differential of potentials– in which they are carried out.&quot;'>
+                           "Por más de una razón, deberíamos asemejar el trabajo del arte al del sueño: es una producción que induce formaciones de superficie que expresan, que traducen aproximadamente, un estado descompensado de energías. Lo esencial en ellas no es la forma o apariencia que adquieren en un instante dado, sino el campo de intensidades –o sea, el diferencial de potenciales– en el que se efectúan."
+                        </blockquote>
+                        
+                        <p data-es='Referido a esto, podemos deducir que el autor plantea que, tanto en el arte como en los sueños, entran en juego diversas tensiones que no se encuentran necesariamente fáciles de percibir. Sino que la forma posee capas más profundas, que solo conectando con ellas podremos descifrarlas o asimilarlas en un modo de sentir determinado.' data-en='Referring to this, we can deduce that the author suggests that, both in art and in dreams, various tensions come into play that are not necessarily easy to perceive. Rather, form possesses deeper layers, which only by connecting with them can we decipher or assimilate them in a determined way of feeling.'>Referido a esto, podemos deducir que el autor plantea que, tanto en el arte como en los sueños, entran en juego diversas tensiones que no se encuentran necesariamente fáciles de percibir. Sino que la forma posee capas más profundas, que solo conectando con ellas podremos descifrarlas o asimilarlas en un modo de sentir determinado.</p>
+                        
+                        <p data-es='Una vez escuché que no podemos soñar imágenes que de alguna u otra forma no hayamos percibido con los ojos abiertos alguna vez. Es decir, que estén ligadas al recuerdo. Los sueños juegan al error, nos hablan desde el error, quizás mediante una persona que al avanzar la narrativa onírica deviene en otra, un lugar que se siente hogar pero no es casa, las cuerdas vocales que se apagan queriendo impulsar un grito, o la eterna caída sin fin que te devuelve despierto en la cama con una sensación de vacío o de algo que nunca llegó a su fin. Los sueños, dice José Luis Brea, no representan, y no representan porque son. El recuerdo los ayuda a ser, pero supongo que solo es la base para un sinfín de preguntas que surgen en el transcurso de unos pocos segundos:' data-en='I once heard that we cannot dream images that we have not somehow perceived with our eyes open at some point. That is, that they are linked to memory. Dreams play with error, they speak to us from error, perhaps through a person who, as the dream narrative advances, becomes another, a place that feels like home but is not house, vocal cords that turn off wanting to push a scream, or the eternal endless fall that returns you awake in bed with a feeling of emptiness or something that never came to an end. Dreams, says José Luis Brea, do not represent, and they do not represent because they are. Memory helps them to be, but I suppose it is only the basis for endless questions that arise in the course of a few seconds:'>Una vez escuché que no podemos soñar imágenes que de alguna u otra forma no hayamos percibido con los ojos abiertos alguna vez. Es decir, que estén ligadas al recuerdo. Los sueños juegan al error, nos hablan desde el error, quizás mediante una persona que al avanzar la narrativa onírica deviene en otra, un lugar que se siente hogar pero no es casa, las cuerdas vocales que se apagan queriendo impulsar un grito, o la eterna caída sin fin que te devuelve despierto en la cama con una sensación de vacío o de algo que nunca llegó a su fin. Los sueños, dice José Luis Brea, no representan, y no representan porque son. El recuerdo los ayuda a ser, pero supongo que solo es la base para un sinfín de preguntas que surgen en el transcurso de unos pocos segundos:</p>
+
+                        <blockquote data-es='"El trabajo del arte ya no más tiene que ver con la representación. ¿Alguien pensaría que el del sueño –ese que induce un «contenido aparente» en quien revive el «latente», o lo cuenta por la mañana– tiene que ver con la «representación»? ¿De qué? Negativo: el trabajo del sueño (...) es una melodía del deseo, nunca su pintura; es presencia, nunca re-presentación. Ese modo del trabajo que llamamos artístico debe a partir de ahora consagrarse a un producir similar –en la esfera del acontecimiento, de la presencia: nunca más en la de la representación."' data-en='&quot;The work of art no longer has to do with representation. Would anyone think that that of the dream –that which induces an «apparent content» in whoever relives the «latent», or tells it in the morning– has to do with «representation»? Of what? Negative: the work of the dream (...) is a melody of desire, never its painting; it is presence, never re-presentation. That mode of work that we call artistic must from now on be consecrated to a similar production –in the sphere of the event, of presence: never again in that of representation.&quot;'>
+                           "El trabajo del arte ya no más tiene que ver con la representación. ¿Alguien pensaría que el del sueño –ese que induce un «contenido aparente» en quien revive el «latente», o lo cuenta por la mañana– tiene que ver con la «representación»? ¿De qué? Negativo: el trabajo del sueño (...) es una melodía del deseo, nunca su pintura; es presencia, nunca re-presentación. Ese modo del trabajo que llamamos artístico debe a partir de ahora consagrarse a un producir similar –en la esfera del acontecimiento, de la presencia: nunca más en la de la representación."
+                        </blockquote>
+
+                        <p data-es='En este mundo que intenta ir hacia una utópica perfección, la irregularidad causada por un error puede descolocarnos. A veces tanto que nuestro mecanismo de defensa nos hace ignorarla. Recuerdo una fotografía en la vereda con mi grupo de amigxs; todxs salimos con los ojos iluminados a causa del flash. Hay quienes quisieron tomar una "mejor foto" (sí, entrecomillada); unos pocos vieron en ella la posibilidad de otra significación abriendo la puerta. Amigxs con ojos luminosos, como una suerte de amistad de otro mundo, de otro planeta.' data-en='In this world that tries to go towards a utopian perfection, the irregularity caused by an error can unsettle us. Sometimes so much that our defense mechanism makes us ignore it. I remember a photograph on the sidewalk with my group of friends; we all came out with illuminated eyes because of the flash. There are those who wanted to take a &quot;better photo&quot; (yes, in quotes); a few saw in it the possibility of another meaning opening the door. Friends with luminous eyes, like a kind of friendship from another world, from another planet.'>En este mundo que intenta ir hacia una utópica perfección, la irregularidad causada por un error puede descolocarnos. A veces tanto que nuestro mecanismo de defensa nos hace ignorarla. Recuerdo una fotografía en la vereda con mi grupo de amigxs; todxs salimos con los ojos iluminados a causa del flash. Hay quienes quisieron tomar una "mejor foto" (sí, entrecomillada); unos pocos vieron en ella la posibilidad de otra significación abriendo la puerta. Amigxs con ojos luminosos, como una suerte de amistad de otro mundo, de otro planeta.</p>
+
+                        <p data-es='¿De dónde nace el error? ¿Por qué es tan sencillo identificarlo y, a veces, resulta tan complejo tenderle una mano, reinterpretarlo? ¿Es la incomodidad de advertir su presencia la que nos lleva a querer destruirlo o simplemente ignorarlo? "Perfecta simetría" toma como referencia las obras de Vera Molnar denominadas *Hypertransformation* (1974) e *Interstices* (1986). La artista se desarrolla en el campo del computer art en donde se caracteriza por jugar con figuras, superponiéndolas, creando patrones y rompiéndolos con pequeñas irregularidades. La simetría está presente en ellas y el juego del error la pone en jaque. Sin embargo, es un concepto que puede hacerse presente en la mente del observador: ¿tiene que haber simetría para pensar en ella?' data-en='Where does error come from? Why is it so easy to identify it and, sometimes, so complex to lend it a hand, reinterpret it? Is it the discomfort of noticing its presence that leads us to want to destroy it or simply ignore it? &quot;Perfect Symmetry&quot; takes as reference the works of Vera Molnar called *Hypertransformation* (1974) and *Interstices* (1986). The artist develops in the field of computer art where she is characterized by playing with figures, superimposing them, creating patterns and breaking them with small irregularities. Symmetry is present in them and the game of error puts it in check. However, it is a concept that can be present in the observer&apos;s mind: does there have to be symmetry to think about it?'>¿De dónde nace el error? ¿Por qué es tan sencillo identificarlo y, a veces, resulta tan complejo tenderle una mano, reinterpretarlo? ¿Es la incomodidad de advertir su presencia la que nos lleva a querer destruirlo o simplemente ignorarlo? 
+                        "Perfecta simetría" toma como referencia las obras de Vera Molnar denominadas *Hypertransformation* (1974) e *Interstices* (1986). La artista se desarrolla en el campo del computer art en donde se caracteriza por jugar con figuras, superponiéndolas, creando patrones y rompiéndolos con pequeñas irregularidades. La simetría está presente en ellas y el juego del error la pone en jaque. Sin embargo, es un concepto que puede hacerse presente en la mente del observador: ¿tiene que haber simetría para pensar en ella?</p>
+                        
+                        <div class="bibliography">
+                            <h4 data-es="Bibliografía" data-en="Bibliography">Bibliografía</h4>
+                            <!-- Removiendo negrita de todos los textos de bibliografía -->
+                            <p data-es="BREA, José Luis. (2002). &quot;Breve (y desordenado) antiglosario –o diccionario de tópicos- sobre el arte electrónico&quot; en La era postmedia. Acción comunicativa, prácticas (post)artísticas y dispositivos neomediales. Salamanca: CASA Editorial, pp. 4-8" data-en="BREA, José Luis. (2002). &quot;Breve (y desordenado) antiglosario –o diccionario de tópicos- sobre el arte electrónico&quot; en La era postmedia. Acción comunicativa, prácticas (post)artísticas y dispositivos neomediales. Salamanca: CASA Editorial, pp. 4-8">BREA, José Luis. (2002). "Breve (y desordenado) antiglosario –o diccionario de tópicos- sobre el arte electrónico" en La era postmedia. Acción comunicativa, prácticas (post)artísticas y dispositivos neomediales. Salamanca: CASA Editorial, pp. 4-8</p>
+                            <p data-es="BREA, José Luis. (2008). &quot;Redefinición de las prácticas artísticas (s. 21)&quot; en El tercer umbral. Estatuto de las prácticas artísticas en la era del capitalismo cultural. Murcia: CENDEAC, pp. 106-113." data-en="BREA, José Luis. (2008). &quot;Redefinición de las prácticas artísticas (s. 21)&quot; en El tercer umbral. Estatuto de las prácticas artísticas en la era del capitalismo cultural. Murcia: CENDEAC, pp. 106-113.">BREA, José Luis. (2008). "Redefinición de las prácticas artísticas (s. 21)" en El tercer umbral. Estatuto de las prácticas artísticas en la era del capitalismo cultural. Murcia: CENDEAC, pp. 106-113.</p>
+                            <p data-es="TARCIC, Maia. (2021). &quot;Las cosas que parecen un error&quot;." data-en="TARCIC, Maia. (2021). &quot;Las cosas que parecen un error&quot;.">TARCIC, Maia. (2021). "Las cosas que parecen un error".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    
+    <script>
+        let currentLanguage = 'es';
+        const isInIframe = window.parent !== window;
+        
+        // Ocultar elementos cuando está en iframe
+        if (isInIframe) {
+            document.addEventListener('DOMContentLoaded', function() {
+                const iframeHiddenElements = document.querySelectorAll('.iframe-hidden');
+                iframeHiddenElements.forEach(element => {
+                    element.classList.add('in-iframe');
+                });
+            });
+        }
+        
+        // Escuchar mensajes del portfolio padre
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'languageChange') {
+                switchLanguage(event.data.language);
+            }
+        });
+        
+        // Función para cambiar idioma
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Actualizar botones de idioma
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('lang-' + lang).classList.add('active');
+            
+            // Actualizar contenido
+            document.querySelectorAll('[data-es][data-en]').forEach(element => {
+                element.innerHTML = element.getAttribute('data-' + lang);
+            });
+        }
+    </script>
+
+    <script src="sketch.js"></script>
+</body>
+</html>

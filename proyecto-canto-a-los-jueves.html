@@ -41,6 +41,34 @@
       border-radius: 4px;
       display: block;
     }
+    .image-modal.active {
+      display: flex;
+    }
+    .modal-close-redesigned {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: var(--primary-bg);
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .modal-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .modal-nav-redesigned {
+      background-color: transparent;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .modal-info-redesigned {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -107,7 +135,7 @@
         
         <!-- Actualizando botón de galería para seguir estilos del sitio -->
         <div class="gallery-trigger" style="margin-top: 2rem;">
-          <button class="gallery-button" onclick="openGallery()">
+          <button class="gallery-button" onclick="window.openGallery()">
             <span data-es="Ver galería completa" data-en="View full gallery">Ver galería completa</span>
             <span class="button-arrow">→</span>
           </button>
@@ -121,20 +149,24 @@
   <!-- Mejorando modal con navegación interna -->
   <div class="image-modal" id="imageModal">
     <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <!-- Agregando navegación dentro del modal -->
-      <button class="modal-nav modal-prev" onclick="prevImage()">‹</button>
-      <button class="modal-nav modal-next" onclick="nextImage()">›</button>
+      <!-- Reposicionando botón cerrar fuera del borde de la foto -->
+      <button class="modal-close-redesigned">&times;</button>
       <div class="modal-image-container">
-        <img src="/placeholder.svg" alt="" id="modalImage">
+        <img src="images/canto-a-los-jueves/1.jpg" alt="" id="modalImage">
       </div>
-      <div class="modal-info">
-        <div class="modal-meta">
+      <!-- Moviendo controles abajo y rediseñando con estética del sitio -->
+      <div class="modal-controls">
+        <button class="modal-nav-redesigned modal-prev" onclick="window.prevImage()">
+          <span>←</span>
+        </button>
+        <div class="modal-info-redesigned">
           <span id="modalNumber"></span>
-          <span id="modalFilm"></span>
+          <!-- Solo mostrando título del proyecto, eliminando subtítulos -->
+          <h3 id="modalTitle">Canto a los jueves</h3>
         </div>
-        <h3 id="modalTitle"></h3>
-        <p id="modalDescription"></p>
+        <button class="modal-nav-redesigned modal-next" onclick="window.nextImage()">
+          <span>→</span>
+        </button>
       </div>
     </div>
   </div>
@@ -151,29 +183,88 @@
     </div>
   </footer>
 
-  <script src="editorial-gallery.js"></script>
   <!-- Agregando script principal para cursor y navegación -->
   <script src="script.js"></script>
   
   <!-- Script para abrir galería directamente -->
   <script>
-    function openGallery() {
-      document.getElementById('imageModal').style.display = 'flex';
-      // Cargar primera imagen
-      const modalImage = document.getElementById('modalImage');
-      modalImage.src = 'images/canto-a-los-jueves/1.jpg';
-      document.getElementById('modalNumber').textContent = '01/17';
-      document.getElementById('modalTitle').textContent = 'Canto a los jueves';
-      document.getElementById('modalDescription').textContent = 'Madres de Plaza de Mayo';
-    }
+    (function() {
+      // Array con todas las imágenes de canto a los jueves
+      const cantoImages = [
+        { src: 'images/canto-a-los-jueves/1.jpg' },
+        { src: 'images/canto-a-los-jueves/2.jpg' },
+        { src: 'images/canto-a-los-jueves/3.jpg' },
+        { src: 'images/canto-a-los-jueves/4.jpg' },
+        { src: 'images/canto-a-los-jueves/5.jpg' },
+        { src: 'images/canto-a-los-jueves/6.jpg' },
+        { src: 'images/canto-a-los-jueves/7.jpg' },
+        { src: 'images/canto-a-los-jueves/8.jpg' },
+        { src: 'images/canto-a-los-jueves/9.jpg' },
+        { src: 'images/canto-a-los-jueves/10.jpg' },
+        { src: 'images/canto-a-los-jueves/11.jpg' },
+        { src: 'images/canto-a-los-jueves/12.jpg' },
+        { src: 'images/canto-a-los-jueves/13.jpg' },
+        { src: 'images/canto-a-los-jueves/14.jpg' },
+        { src: 'images/canto-a-los-jueves/15.jpg' },
+        { src: 'images/canto-a-los-jueves/16.jpg' },
+        { src: 'images/canto-a-los-jueves/17.jpg' }
+      ];
 
-    function prevImage() {
-      // Implementación para la imagen anterior
-    }
+      let currentImageIndex = 0;
 
-    function nextImage() {
-      // Implementación para la imagen siguiente
-    }
+      window.openGallery = function() {
+        const modal = document.getElementById('imageModal');
+        modal.classList.add('active');
+        currentImageIndex = 0;
+        updateModalImage();
+      };
+
+      function updateModalImage() {
+        const modalImage = document.getElementById('modalImage');
+        const currentImage = cantoImages[currentImageIndex];
+        
+        modalImage.src = currentImage.src;
+        document.getElementById('modalNumber').textContent = `${String(currentImageIndex + 1).padStart(2, '0')}/${cantoImages.length}`;
+        document.getElementById('modalTitle').textContent = 'Canto a los jueves';
+      }
+
+      window.prevImage = function() {
+        currentImageIndex = currentImageIndex > 0 ? currentImageIndex - 1 : cantoImages.length - 1;
+        updateModalImage();
+      };
+
+      window.nextImage = function() {
+        currentImageIndex = currentImageIndex < cantoImages.length - 1 ? currentImageIndex + 1 : 0;
+        updateModalImage();
+      };
+
+      // Cerrar modal
+      document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('imageModal');
+        const closeBtn = document.querySelector('.modal-close-redesigned');
+        
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function() {
+            modal.classList.remove('active');
+          });
+        }
+
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            modal.classList.remove('active');
+          }
+        });
+
+        // Navegación con teclado
+        document.addEventListener('keydown', function(e) {
+          if (modal.classList.contains('active')) {
+            if (e.key === 'ArrowLeft') window.prevImage();
+            if (e.key === 'ArrowRight') window.nextImage();
+            if (e.key === 'Escape') modal.classList.remove('active');
+          }
+        });
+      });
+    })();
   </script>
 </body>
 </html>
