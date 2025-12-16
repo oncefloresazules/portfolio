@@ -789,8 +789,10 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  /* Fixed to 3 columns with max-width to prevent stretching when filtered */
+  grid-template-columns: repeat(3, minmax(0, 400px));
   gap: 30px;
+  justify-content: start;
 }
 
 .project-item {
@@ -803,6 +805,9 @@ body {
   backdrop-filter: blur(10px);
   text-decoration: none;
   color: inherit;
+  /* Ensure consistent width */
+  width: 100%;
+  max-width: 400px;
 }
 
 .project-item:hover {
