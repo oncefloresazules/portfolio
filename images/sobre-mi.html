@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí - Florencia Pennella</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" class="brand-text">&lt;/oncefloresazules&gt;</a>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item" data-text="01">
+                <span data-es="inicio" data-en="home">inicio</span>
+            </a>
+            <a href="proyectos.html" class="nav-item" data-text="02">
+                <span data-es="proyectos" data-en="projects">proyectos</span>
+            </a>
+            <a href="sobre-mi.html" class="nav-item active" data-text="03">
+                <span data-es="sobre-mi" data-en="about">sobre-mi</span>
+            </a>
+            <a href="contacto.html" class="nav-item" data-text="04">
+                <span data-es="contacto" data-en="contact">contacto</span>
+            </a>
+            <!-- Selector de idioma solo para móvil (dentro del menú) -->
+            <div class="language-selector mobile-only">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <!-- Selector de idioma para desktop (fuera del menú) -->
+        <div class="language-selector desktop-only">
+            <button class="lang-btn active" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <main class="main-viewport">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="noise-overlay"></div>
+        </div>
+        
+        <!-- Header consistente -->
+        <div class="page-header">
+            <div class="page-number">03</div>
+            <h1 class="page-title" data-es="sobre-mi" data-en="about">sobre-mi</h1>
+        </div>
+
+        <!-- Contenido -->
+        <div class="content-area">
+            <div class="about-layout">
+                <div class="about-main">
+                    <div class="about-intro">
+    <h2 class="section-subtitle">Bio</h2>
+    <p class="birth-info" data-es="Nacida en Alberti, 1997." data-en="Born in Alberti, 1997.">Nacida en Alberti, 1997.</p>
+   <p class="greeting" data-es="¡Hola! Me llamo Florencia Pennella." data-en="Hello! I'm Florencia Pennella.">¡Hola! Me llamo Florencia Pennella.</p>
+</div>
+
+                    <div class="about-content">
+    <!-- Contenido en Español -->
+    <div class="lang-content" data-lang="es">
+        <div class="content-section">
+            <p class="section-description">Soy Diseñadora de Imagen y Sonido, egresada de la Facultad de Arquitectura, Diseño y Urbanismo de la Universidad de Buenos Aires, y actualmente estudiante de la Licenciatura en Artes Multimediales en la Universidad Nacional de las Artes. Mi formación se ha complementado con diversos cursos especializados, como Fotoperiodismo, Diseño UX-UI, Community Manager y Publicidad, VJing, y manejo avanzado de herramientas como Photoshop, Illustrator, After Effects y Adobe Premiere.</p>
+            
+            <p class="section-description">Mi enfoque artístico se centra en la exploración de lenguajes visuales y narrativos no convencionales, como el videoarte, el found-footage, el ensayo audiovisual y el diseño interactivo. Además, me interesa combinar disciplinas como la fotografía analógica y la programación creativa (HTML, CSS, JavaScript) para desarrollar piezas que dialoguen entre lo nostálgico y lo tecnológico.</p>
+            
+            <p class="section-description">Apasionada por la narrativa audiovisual y las atmósferas inmersivas, busco constantemente nuevas formas de experimentar con el sonido, la imagen y el movimiento, creando obras que conecten con las emociones y el pensamiento crítico.</p>
+        </div>
+    </div>
+    
+    <!-- Contenido en Inglés -->
+    <div class="lang-content" data-lang="en" style="display: none;">
+        <div class="content-section">
+            <p class="section-description">I’m an Image and Sound Designer, graduated from the Faculty of Architecture, Design and Urbanism at the University of Buenos Aires, and currently studying for a Bachelor’s degree in Multimedia Arts at the National University of the Arts. My training has been enriched by specialized courses in areas such as Photojournalism, UX/UI Design, Community Management and Advertising, VJing, and advanced skills in tools like Photoshop, Illustrator, After Effects, and Adobe Premiere.</p>
+            
+            <p class="section-description">My artistic practice focuses on exploring unconventional visual and narrative languages—such as video art, found footage, audiovisual essays, and interactive design. I’m also interested in combining disciplines like analog photography and creative coding (HTML, CSS, JavaScript) to create works that blend nostalgia with technology.</p>
+            
+            <p class="section-description">Driven by a passion for audiovisual storytelling and immersive atmospheres, I’m always seeking new ways to experiment with sound, image, and movement—creating pieces that resonate emotionally and invite critical thought.</p>
+        </div>
+    </div>
+
+    <!-- Skills más compactas -->
+    <div class="skills-compact">
+    <div class="skill-group">
+        <h4 data-es="Post-producción" data-en="Post-production">Post-producción</h4>
+        <div class="skill-tags">
+            <span class="skill-tag advanced">Premiere</span>
+            <span class="skill-tag advanced">After Effects</span>
+            <span class="skill-tag advanced">Reaper</span>
+        </div>
+    </div>
+
+    <div class="skill-group">
+        <h4 data-es="Diseño gráfico" data-en="Graphic Design">Diseño gráfico</h4>
+        <div class="skill-tags">
+            <span class="skill-tag advanced">Photoshop</span>
+            <span class="skill-tag advanced">Illustrator</span>
+            <span class="skill-tag advanced">Figma</span>
+        </div>
+    </div>
+
+    <div class="skill-group">
+        <h4 data-es="Animación 2D & 3D" data-en="2D & 3D Animation">Animación 2D & 3D</h4>
+        <div class="skill-tags">
+            <span class="skill-tag advanced">Blender</span>
+            <span class="skill-tag advanced">Maya</span>
+            <span class="skill-tag advanced">Animate</span>
+        </div>
+    </div>
+
+    <div class="skill-group">
+        <h4 data-es="VJ & Arte interactivo" data-en="VJ & Interactive Art">VJ & Arte interactivo</h4>
+        <div class="skill-tags">
+            <span class="skill-tag advanced">Resolume Arena</span>
+            <span class="skill-tag advanced">TouchDesigner</span>
+            <span class="skill-tag advanced">HTML/CSS/JS</span>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Formación corregida -->
+    <div class="content-section">
+        <h3 class="section-title" data-es="Formación" data-en="Education">Formación</h3>
+        <div class="education-list">
+            <div class="education-item">
+                <span class="university-highlight">UNA</span>
+                <span class="degree-text" data-es="Licenciatura en Artes Multimediales" data-en="Bachelor in Multimedia Arts">Licenciatura en Artes Multimediales</span>
+            </div>
+            <div class="education-item">
+                <span class="university-highlight">UBA</span>
+                <span class="degree-text" data-es="Diseño de Imagen y Sonido" data-en="Image and Sound Design">Diseño de Imagen y Sonido</span>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="about-visual">
+                    <div class="image-container">
+                        <img src="images/florencia-profile.png" alt="Florencia Pennella" class="profile-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <span>&copy; 2025 Florencia Pennella</span>
+            </div>
+            <div class="footer-tech">
+                <span>Buenos Aires, Argentina</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
